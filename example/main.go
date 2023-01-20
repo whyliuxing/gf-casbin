@@ -6,7 +6,7 @@ import (
 
 	"github.com/gogf/gf/v2/database/gdb"
 
-	"github.com/dobyte/gf-casbin"
+	"github.com/whyliuxing/gf-casbin"
 )
 
 var enforcer *casbin.Enforcer

@@ -1,4 +1,4 @@
-module github.com/dobyte/gf-casbin
+module github.com/whyliuxing/gf-casbin
 
 go 1.16
 

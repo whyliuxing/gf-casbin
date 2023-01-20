@@ -255,7 +255,7 @@ func (a *adapter) UpdatePolicies(sec string, ptype string, oldRules, newRules []
 		return
 	}
 
-	err = a.db.Transaction(context.TODO(), func(ctx context.Context, tx *gdb.TX) error {
+	err = a.db.Transaction(context.TODO(), func(ctx context.Context, tx gdb.TX) error {
 		for i := 0; i < int(math.Min(float64(len(oldRules)), float64(len(newRules)))); i++ {
 			if _, err = tx.Model(a.table).Update(a.buildPolicyRule(ptype, newRules[i]), a.buildPolicyRule(ptype, oldRules[i])); err != nil {
 				return err
